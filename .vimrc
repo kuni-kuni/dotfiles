@@ -1,3 +1,5 @@
+syntax on
+
 set expandtab
 set softtabstop=4
 set autoindent
@@ -12,7 +14,7 @@ NeoBundle 'ujihisa/neco-ghc'
 let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
-NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc', {'build': {'linux': 'make -f make_unix.mak'}}
 NeoBundle 'eagletmt/ghcmod-vim'
 command T GhcModType
 command TT GhcModTypeClear

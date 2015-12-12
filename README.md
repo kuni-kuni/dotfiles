@@ -1,4 +1,5 @@
-apt-get install haskell-platform
-cabal install ghc-mod
+$ apt-get install haskell-platform
+$ cabal install ghc-mod
 
-NeoBundle
+bash_profileに追記
+export PATH=$PATH:~/.cabal/bin
