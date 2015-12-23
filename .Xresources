@@ -1,0 +1,11 @@
+XTerm*utf8	: 1
+XTerm*locale	:true
+Xterm*selectToClipboard	: true
+XTerm*faceName	: Liberation Mono
+XTerm*faceNameDoublesize	: TakaoGothic
+XTerm*faceSize	: 12
+!XTerm*geometry	: 100x30+100+100
+XTerm*saveLines	: 1000
+XTerm*background	: black
+XTerm*foreground	: white
+XTerm*scrollBar	: true

@@ -1,0 +1,34 @@
+http://kamblog3.blogspot.jp/2012/05/thinkpad-x200sdebian.html
+Thinkpad x200sにdebianをインストールした時の諸設定メモ
+
+(1) 無線LANドライバインストール
+firmware_iwwifiをインストールすれば終了。
+ちなみに、network managerは使用せずにwicd使ってます。 
+
+(2) トラックポイントの設定
+縦スクロールを中ボタンでできるようにする設定。 
+/usr/share/X11/xorg.conf.d/20-thinkpad.conf(新規作成)に以下の記述。
+Section "InputClass"
+    Identifier "Trackpoint Wheel Emulation"
+    MatchProduct "TrackPoint"
+    MatchDevicePath "/dev/input/event*"
+    Driver "evdev"
+    Option "EmulateWheel" "true"
+    Option "EmulateWheelButton" "2"
+    Option "Emulate3Buttons" "false"
+    Option "XAxisMapping" "6 7"
+    Option "YAxisMapping" "4 5"
+EndSection
+ 
+(5) バッテリーの充電設定
+バッテリー充電の下限、上限を決める設定
+・以下のパッケージをインストール
+tp-smapi-dkms hdapsd sysfsutils
+・ /etc/modulesに以下の記述を追加
+tp-smapi 
+・/etc/sysfs.confに以下の記述を追加
+devices/platform/smapi/BAT0/start_charge_thresh = 30
+devices/platform/smapi/BAT0/stop_charge_thresh = 95
+start_charge_threshが充電を開始するバッテリ残量(%)。
+stop_charge_threshが充電を終了するバッテリ残量(%)。
+

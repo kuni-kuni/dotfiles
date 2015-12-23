@@ -1,0 +1,16 @@
+iptablesの設定は
+$ sudo aptitude install iptables-persistent
+で作成された
+/etc/iptables/rules.v4
+に保存されている。
+$ sudo netfilter-persistent reload
+で内容をiptablesに反映
+
+startxで任意のWMを起動
+$ startx /etc/X11/xinit/xinitrc /usr/bin/xmonad
+
+wifi
+wicd
+
+音
+pavucontrol
