@@ -8,8 +8,17 @@ myModMask = mod1Mask
 
 myLayoutHook = smartBorders $ layoutHook defaultConfig
 
+myBar = "xmobar"
+
+myPP = xmobarPP
+    { ppTitle = (\str -> "")
+    }
+
+toggleStrutsKey XConfig {XMonad.modMask = modMask}
+    = (modMask, xK_b)
+
 main = do
-    xmonad =<< xmobar defaultConfig
+    xmonad =<< statusBar myBar myPP toggleStrutsKey defaultConfig
         { terminal = myTerminal
         , modMask = myModMask
         , layoutHook = myLayoutHook
