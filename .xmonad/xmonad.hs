@@ -1,27 +1,25 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.ManageDocks
 import XMonad.Layout.NoBorders
-import XMonad.Util.Run
 
 myTerminal = "urxvt"
 
 myModMask = mod1Mask
 
-myLayoutHook = smartBorders $ avoidStruts $ layoutHook defaultConfig
+myLayoutHook = smartBorders $ layoutHook defaultConfig
 
-myLogHook h = dynamicLogWithPP $ defaultPP
-    { ppOutput = hPutStrLn h
+myBar = "xmobar"
+
+myPP = xmobarPP
+    { ppCurrent = xmobarColor "429942" "" . wrap "<" ">"
     }
 
-myManageHook = manageDocks <+> manageHook defaultConfig
+toggleStrutsKey XConfig {XMonad.modMask = modMask}
+    = (modMask, xK_b)
 
 main = do
-    xmproc <- spawnPipe "xmobar"
-    xmonad defaultConfig
+    xmonad =<< statusBar myBar myPP toggleStrutsKey defaultConfig
         { terminal = myTerminal
         , modMask = myModMask
         , layoutHook = myLayoutHook
-        , logHook = myLogHook xmproc
-        , manageHook = myManageHook
         }
