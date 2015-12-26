@@ -2,13 +2,14 @@ import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Layout.NoBorders
 import XMonad.Layout.ResizableTile
+import XMonad.Layout.ToggleLayouts
 import XMonad.Util.EZConfig
 
 myTerminal = "urxvt"
 
 myModMask = mod1Mask
 
-myLayoutHook = smartBorders $ tiled
+myLayoutHook = toggleLayouts (noBorders Full) $ smartBorders tiled ||| smartBorders (Mirror tiled)
     where
         tiled = ResizableTall 1 (3/100) (1/2) []
 
@@ -30,6 +31,7 @@ myConfig = defaultConfig
     `additionalKeys`
     [ ((myModMask .|. shiftMask, xK_h), sendMessage MirrorShrink)
     , ((myModMask .|. shiftMask, xK_l), sendMessage MirrorExpand)
+    , ((myModMask , xK_f), sendMessage ToggleLayout)
     ]
 
 main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
