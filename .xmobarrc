@@ -84,7 +84,7 @@ Config {
         -- time and date indicator 
         --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)
         , Run Date
-            "<fc=#ABABAB>%m-%d %a %T</fc>" "date" 10
+            "<fc=#ababab>%m-%d %a %T</fc>" "date" 10
 
         , Run StdinReader
 

@@ -11,7 +11,8 @@ myLayoutHook = smartBorders $ layoutHook defaultConfig
 myBar = "xmobar"
 
 myPP = xmobarPP
-    { ppTitle = (\str -> "")
+    { ppCurrent = xmobarColor "#ababab" "" . wrap "[" "]"
+    , ppTitle = (\str -> "")
     }
 
 toggleStrutsKey XConfig {XMonad.modMask = modMask}
