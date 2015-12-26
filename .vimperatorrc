@@ -9,4 +9,4 @@ set hintchars=asdfghjkl
 set complete=s
 
 " commandモードでIMEオフ
-style! -name=commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
+style -name=commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}

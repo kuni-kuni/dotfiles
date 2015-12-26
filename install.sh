@@ -1,6 +1,11 @@
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/.Xresources ~/.Xresources
-ln -sf ~/dotfiles/.vimperatorrc ~/.vimperatorrc
+ln -sf ~/dotfiles/.vimrc ~/
+ln -sf ~/dotfiles/.Xresources ~/
+ln -sf ~/dotfiles/.vimperatorrc ~/
 
 mkdir -p ~/.xmonad
-ln -sf ~/dotfiles/xmonad.hs ~/.xmonad/xmohad.hs
+ln -sf ~/dotfiles/.xmonad/xmonad.hs ~/.xmonad/
+
+ln -sf ~/dotfiles/.xmobarrc ~/
+
+mkdir -p ~/.config/fontconfig
+ln -sf ~/dotfiles/.config/fontconfig/fonts.conf ~/.config/fotconfig/
