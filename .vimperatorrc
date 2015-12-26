@@ -1,0 +1,12 @@
+nnoremap j 4j
+nnoremap k 4k
+nnoremap J gT
+nnoremap K gt
+
+set hintchars=asdfghjkl
+
+" tabopenでサーチエンジンのみ
+set complete=s
+
+" commandモードでIMEオフ
+style! -name=commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
