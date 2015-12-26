@@ -2,8 +2,12 @@ nnoremap j 4j
 nnoremap k 4k
 nnoremap J gT
 nnoremap K gt
+nnoremap h H
+nnoremap l L
+nnoremap H 4h
+nnoremap L 4l
 
-set hintchars=asdfghjkl
+set hintchars=asdfjkl
 
 " tabopenでサーチエンジンのみ
 set complete=s
