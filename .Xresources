@@ -9,8 +9,8 @@ XTerm*background	: black
 XTerm*foreground	: white
 XTerm*scrollBar	: true
 
-Rxvt*font  : xft:Liberation Mono:size=12:antialias=true
-Rxvt*background : black
-Rxvt*foreground : white
-Rxvt*scrollBar_right    : true
-Rxvt*saveLines  : 1000
+Rxvt.font  : xft:Liberation Mono:size=12:antialias=true
+Rxvt.background : black
+Rxvt.foreground : white
+Rxvt.scrollBar_right    : true
+Rxvt.saveLines  : 1000
