@@ -5,6 +5,8 @@ import XMonad.Layout.ResizableTile
 import XMonad.Layout.ToggleLayouts
 import XMonad.Util.EZConfig
 import XMonad.Actions.SwapWorkspaces
+import XMonad.Prompt
+import XMonad.Prompt.Shell
 
 myTerminal = "urxvt"
 
@@ -37,6 +39,7 @@ myConfig = defaultConfig
     [ ((myModMask .|. shiftMask, xK_h), sendMessage MirrorShrink)
     , ((myModMask .|. shiftMask, xK_l), sendMessage MirrorExpand)
     , ((myModMask , xK_f), sendMessage ToggleLayout)
+    , ((myModMask , xK_p), shellPrompt defaultXPConfig)
     ]
     ++
     [((myModMask .|. controlMask, k), windows $ swapWithCurrent i)
