@@ -8,6 +8,7 @@ set softtabstop=4
 set tabstop=8
 set autoindent
 set splitbelow
+set noswapfile
 set list
 set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:%
 
@@ -33,6 +34,7 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'grep.vim'
 NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'kana/vim-smartinput'
 
 "Haskell
 NeoBundle 'ujihisa/neco-ghc'
@@ -51,4 +53,3 @@ NeoBundle 'travitch/hasksyn'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
-
