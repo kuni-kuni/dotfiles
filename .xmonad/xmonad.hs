@@ -1,5 +1,6 @@
 import XMonad
 import XMonad.Actions.SwapWorkspaces
+import XMonad.Actions.GridSelect
 import XMonad.Layout.NoBorders
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.ToggleLayouts
@@ -44,8 +45,11 @@ myConfig = defaultConfig
     , ((myModMask .|. shiftMask, xK_l), sendMessage MirrorExpand)
     , ((myModMask , xK_f), sendMessage ToggleLayout)
     , ((myModMask , xK_p), shellPrompt defaultXPConfig)
+    --GridSelect
+    , ((myModMask , xK_g), goToSelected defaultGSConfig)
     ]
     ++
+    --SwapWorkspaces
     [((myModMask .|. controlMask, k), windows $ swapWithCurrent i)
         | (i, k) <- zip myWorkspaces [xK_1 ..]]
     )
