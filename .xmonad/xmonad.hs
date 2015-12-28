@@ -15,25 +15,31 @@ myTerminal = "urxvt"
 
 myModMask = mod1Mask
 
+--M-Fでフルスクリーン
+--ウィンドウが一つの時はボーダーなし
 myLayoutHook = toggleLayouts (noBorders Full) $ smartBorders tiled ||| smartBorders (Mirror tiled)
     where
         tiled = ResizableTall 1 (3/100) (1/2) []
 
 myBar = "xmobar"
 
+--xmobarのStdinReader表示設定
 myPP = xmobarPP
     { ppCurrent = xmobarColor "#ababab" "" . wrap "[" "]"
     , ppTitle = (\str -> "")
     }
 
+--xmobar表示をM-bで切り替え
 toggleStrutsKey XConfig {XMonad.modMask = modMask}
     = (modMask, xK_b)
 
 myWorkspaces = ["1", "2", "3", "4", "5", "6", "7" ,"8" ,"9"]
 
+--新規ウィンドウは末尾に追加
 myManageHook = insertPosition End Newer
 
 --EwmhDesktops
+--アプリケーションのフルスクリーン表示対応
 myHandleEventHook = handleEventHook defaultConfig <+> fullscreenEventHook
 
 myConfig = defaultConfig
