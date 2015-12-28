@@ -5,14 +5,20 @@ import XMonad.Layout.ResizableTile
 import XMonad.Layout.ToggleLayouts
 import XMonad.Util.EZConfig
 import XMonad.Actions.SwapWorkspaces
+import XMonad.Layout.ThreeColumns
 
 myTerminal = "urxvt"
 
 myModMask = mod1Mask
 
-myLayoutHook = toggleLayouts (noBorders Full) $ smartBorders tiled ||| smartBorders (Mirror tiled)
+myLayoutHook2 = toggleLayouts (noBorders Full) $ smartBorders tiled ||| smartBorders (Mirror tiled)
     where
         tiled = ResizableTall 1 (3/100) (1/2) []
+
+myLayoutHook = toggleLayouts (noBorders Full) $ smartBorders (ThreeCol 1 (3/100) (1/2)) ||| smartBorders (ThreeColMid 1 (3/100) (1/2)) ||| smartBorders tiled ||| smartBorders (Mirror tiled)
+    where
+        tiled = ResizableTall 1 (3/100) (1/2) []
+
 
 myBar = "xmobar"
 
