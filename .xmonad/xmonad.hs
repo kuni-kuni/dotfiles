@@ -1,12 +1,13 @@
 import XMonad
-import XMonad.Hooks.DynamicLog
+import XMonad.Actions.SwapWorkspaces
 import XMonad.Layout.NoBorders
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.ToggleLayouts
-import XMonad.Util.EZConfig
-import XMonad.Actions.SwapWorkspaces
+import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.InsertPosition
 import XMonad.Prompt
 import XMonad.Prompt.Shell
+import XMonad.Util.EZConfig
 
 myTerminal = "urxvt"
 
@@ -28,11 +29,14 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask}
 
 myWorkspaces = ["1", "2", "3", "4", "5", "6", "7" ,"8" ,"9"]
 
+myManageHook = insertPosition End Newer
+
 myConfig = defaultConfig
     { terminal = myTerminal
     , modMask = myModMask
     , layoutHook = myLayoutHook
     , workspaces = myWorkspaces
+    , manageHook = myManageHook
     }
     `additionalKeys`
     (
