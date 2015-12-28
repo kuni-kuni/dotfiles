@@ -10,8 +10,6 @@ set autoindent
 set splitbelow
 set list
 set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:%
-set nocursorline
-autocmd InsertEnter,InsertLeave * set cursorline!
 
 "search
 set wrapscan
