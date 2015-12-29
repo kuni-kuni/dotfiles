@@ -11,14 +11,13 @@ set splitbelow
 set noswapfile
 set list
 set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:%
+set clipboard=unnamedplus
 
 "search
 set wrapscan
 set ignorecase
 set smartcase
 set incsearch
-
-set clipboard=unnamedplus
 
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 

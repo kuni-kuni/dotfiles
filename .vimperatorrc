@@ -1,13 +1,16 @@
 nnoremap j 4j
 nnoremap k 4k
-nnoremap J gT
-nnoremap K gt
+nnoremap J 4h
+nnoremap K 4l
 nnoremap h H
 nnoremap l L
-nnoremap H 4h
-nnoremap L 4l
+nnoremap H gT
+nnoremap L gt
 
 set hintchars=asdfjkl
+
+" 入力フォームにフォーカスしない
+set focuscontent
 
 " tabopenでサーチエンジンのみ
 set complete=s
