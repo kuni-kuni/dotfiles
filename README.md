@@ -1,4 +1,4 @@
-$ apt-get install haskell-platform
+$ sudo aptitude install haskell-platform
 $ cabal install ghc-mod
 
 bash_profileに追記
