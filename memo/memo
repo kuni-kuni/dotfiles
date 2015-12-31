@@ -1,0 +1,4 @@
+ファイル名置換
+例：example0002-abc.hsをexample0002.hsに置換
+find . -maxdepth 1 -type f -name "exam*" -exec bash -c "mv {} \$(echo {} | sed -r 's/(example000[0-9]).*(\.hs)/\1\2/')" \;
+
