@@ -4,6 +4,7 @@ import XMonad.Actions.GridSelect
 import XMonad.Layout.NoBorders
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.ToggleLayouts
+import XMonad.Layout.ThreeColumns
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.InsertPosition
 import XMonad.Hooks.EwmhDesktops
@@ -17,9 +18,10 @@ myModMask = mod1Mask
 
 --M-Fでフルスクリーン
 --ウィンドウが一つの時はボーダーなし
-myLayoutHook = toggleLayouts (noBorders Full) $ smartBorders tiled ||| smartBorders (Mirror tiled)
+myLayoutHook = toggleLayouts (noBorders Full) $ smartBorders rTall ||| smartBorders (Mirror rTall) ||| smartBorders threeCol
     where
-        tiled = ResizableTall 1 (3/100) (1/2) []
+        rTall = ResizableTall 1 (3/100) (1/2) []
+        threeCol = ThreeCol 1 (3/100) (1/2)
 
 myBar = "xmobar"
 
