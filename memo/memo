@@ -8,6 +8,9 @@ ghc,cabal最新
 $ sudo cabal update
 $ sudo cabal install --global cabal-install
 
+remminaで接続できなくなった時
+~/.freerdp/known_hostsを削除
+
 xmonad設定の参考
 https://bbs.archlinux.org/viewtopic.php?id=123355
 http://qiita.com/ssh0/items/dedeebe249d0d6ba4975
