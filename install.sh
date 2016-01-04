@@ -1,6 +1,6 @@
 ln -sf ~/dotfiles/.vimrc ~/
 ln -sf ~/dotfiles/.Xresources ~/
-ln -sh ~/dotfiles/.inputrc ~/
+ln -sf ~/dotfiles/.inputrc ~/
 
 # xmonad
 mkdir -p ~/.xmonad
@@ -8,8 +8,8 @@ ln -sf ~/dotfiles/.xmonad/xmonad.hs ~/.xmonad/
 ln -sf ~/dotfiles/.xmobarrc ~/
 
 # フォント
-mkdir -p ~/.config/fontconfig
-ln -sf ~/dotfiles/.config/fontconfig/fonts.conf ~/.config/fotconfig/
+#mkdir -p ~/.config/fontconfig
+#ln -sf ~/dotfiles/.config/fontconfig/fonts.conf ~/.config/fotconfig/
 
 # vimperator
 ln -sf ~/dotfiles/.vimperatorrc ~/
