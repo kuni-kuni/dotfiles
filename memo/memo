@@ -16,3 +16,11 @@ https://bbs.archlinux.org/viewtopic.php?id=123355
 http://qiita.com/ssh0/items/dedeebe249d0d6ba4975
 http://blog.drmn.jp/2013/04/haskell-xmonad.html
 http://qiita.com/ssh0/items/dedeebe249d0d6ba4975
+
+gpe storm対応
+$ grep . -r /sys/firmware/acpi/interrupts
+で数値の高いgpeの番号を確認
+$ sudo crontab -e
+開いたファイルに
+@reboot echo "disable" > /sys/firmware/acpi/interrupts/gpe[XX]
+を記入して保存（[XX]は番号に合わせる）
