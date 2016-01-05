@@ -10,7 +10,6 @@ ln -sf ~/dotfiles/.xmobarrc ~/
 # フォント
 #mkdir -p ~/.config/fontconfig
 #ln -sf ~/dotfiles/.config/fontconfig/fonts.conf ~/.config/fotconfig/
-#sudo ln -sf /usr/share/fontconfig/conf.avail/10-unhinted.conf /etc/fonts/conf.d/
 
 # vimperator
 ln -sf ~/dotfiles/.vimperatorrc ~/
