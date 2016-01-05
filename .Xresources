@@ -9,8 +9,7 @@ XTerm*background	: black
 XTerm*foreground	: white
 XTerm*scrollBar	: true
 
-!Rxvt.font  : xft:Monospace:size=12:antialias=true
-Rxvt.font  : xft:Liberation Mono:size=12:antialias=true
+Rxvt.font  : xft:Monospace:size=13:antialias=true
 Rxvt.background : black
 Rxvt.foreground : white
 Rxvt.scrollBar  : false
