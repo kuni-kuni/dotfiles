@@ -1,0 +1,5 @@
+IP固定 http://qiita.com/f-akazawa/items/8f610be4804523ca0d17
+1. /etc/init/network-manager.confのstart onの項目をコメントアウト
+2. sudo stop network-manager
+3. /etc/network/interfacesに設定記述
+4. ifdown eth0 && ifup eth0
