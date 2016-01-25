@@ -7,7 +7,7 @@ nnoremap l L
 nnoremap H gT
 nnoremap L gt
 
-set hintchars=asdfjkl
+set hintchars=asdjkl
 
 " 入力フォームにフォーカスしない
 set focuscontent
