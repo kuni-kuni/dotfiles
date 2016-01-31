@@ -46,5 +46,7 @@ suckless-tools
 xmobar
 curl
 xscreensaver
+virtualenv
+python-pip
 
-// ここまで2015/12/25
+// ここまで2016/01/31
