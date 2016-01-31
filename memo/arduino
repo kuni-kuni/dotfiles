@@ -1,0 +1,26 @@
+virtualenv、pipインストール
+$ sudo aptitude install virtualenv
+$ sudo aptitude install python-pip
+
+仮想環境作成
+$ virtualenv --no-site-packages arduino
+$ cd arduino
+$ source ./bin/activate
+
+platformioインストール
+$ pip install platformio
+$ pip install --egg scons
+
+プロジェクトディレクトリ作成
+$ mkdir project
+$ cd project
+$ platformio init --board=uno
+
+platformio.iniにtarget=upload追記
+src内にinoファイルを作成
+
+起動
+$ sudo ../bin/platformio run
+
+virtualenv終了
+$ deactivate

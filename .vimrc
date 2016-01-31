@@ -37,6 +37,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'grep.vim'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'kana/vim-smartinput'
+NeoBundle "sudar/vim-arduino-syntax"
 
 "Haskell
  "補完
