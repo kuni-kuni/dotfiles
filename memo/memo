@@ -24,3 +24,27 @@ $ sudo crontab -e
 開いたファイルに
 @reboot echo "disable" > /sys/firmware/acpi/interrupts/gpe[XX]
 を記入して保存（[XX]は番号に合わせる）
+
+xrdpでxmonad
+~/.xsessionにxmonadと書く
+vnc4server必要？
+日本語キーマップ変更
+$ cd /etc/xrdp
+$ sudo wget http://www.mail-archive.com/xrdp-devel@lists.sourceforge.net/msg00263/km-e0010411.ini
+$ sudo mv km-e0010411.ini km-0411.ini
+$ sudo ln -s km-0411.ini km-e0010411.ini
+$ sudo ln -s km-0411.ini km-e0200411.ini
+$ sudo ln -s km-0411.ini km-e0210411.ini
+(vinoを使う場合)
+/etc/xrdp/xrdp.iniに追記
+[xrdp0]
+name=Active Local Login
+lib=libvnc.so
+username=ask
+password=ask
+ip=127.0.0.1
+port=5900
+$ vino-preferences
+共有にチェック、接続確認のチェック外す
+$ gsettings set org.gnome.Vino require-encryption false
+$ /usr/lib/vino/vino-server &
