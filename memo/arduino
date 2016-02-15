@@ -2,6 +2,8 @@ virtualenv、pipインストール
 $ sudo aptitude install virtualenv
 $ sudo aptitude install python-pip
 
+必要に応じてpython2.7-devのインストール
+
 仮想環境作成
 $ virtualenv --no-site-packages arduino
 $ cd arduino

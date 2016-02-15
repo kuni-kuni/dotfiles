@@ -83,3 +83,10 @@ $ bindle install --path=vender/bundle
 
 ソースファイルの最初に書く
 require "bundle/setup"
+
+-----
+mecab neologdユーザ辞書作成
+$ git clone https://github.com/neologd/mecab-ipadic-neologd.git
+$ cd mecab-ipadic-neologd/seed
+$ xz -dkv mecab-user-dict-seed.20160212.csv.xz
+$ /usr/lib/mecab/mecab-dict-index -d /usr/share/mecab/dic/ipadic -u mecab-user-dict-seed.20160212.csv.dic -f utf-8 -t utf-8 mecab-user-dict-seed.20160212.csv
