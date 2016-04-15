@@ -38,6 +38,8 @@ $ sudo apt-get install xmobar
 source.listを元に戻して
 $ sudo apt-get update
 
+$ sudo apt-get install rxvt-unicode-256color
+
 -----
 gpe storm対応
 $ grep . -r /sys/firmware/acpi/interrupts
