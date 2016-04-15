@@ -27,6 +27,18 @@ http://blog.drmn.jp/2013/04/haskell-xmonad.html
 http://qiita.com/ssh0/items/dedeebe249d0d6ba4975
 
 -----
+xmonad0.11インストール(Ubuntu)
+$ sudo apt-get install haskell-platform
+$ sudo apt-get install xmonad libghc-xmonad-contrib-dev
+
+xmobar0.22インストール
+universeのtrustyをvividに変更したものをsource.listに一時的に追加
+$ sudo apt-get update
+$ sudo apt-get install xmobar
+source.listを元に戻して
+$ sudo apt-get update
+
+-----
 gpe storm対応
 $ grep . -r /sys/firmware/acpi/interrupts
 で数値の高いgpeの番号を確認
