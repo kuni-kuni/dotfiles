@@ -11,6 +11,10 @@ ln -sf ~/dotfiles/.xmobarrc ~/
 #mkdir -p ~/.config/fontconfig
 #ln -sf ~/dotfiles/.config/fontconfig/fonts.conf ~/.config/fotconfig/
 
+# Neobundle
+mkdir -p ~/.vim/bundle
+git clone https://github.com/shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vim
+
 # vimperator
 ln -sf ~/dotfiles/.vimperatorrc ~/
 mkdir -p ~/.vimperator/plugin
