@@ -1,0 +1,16 @@
+-----
+ip固定
+インターフェースの名前確認
+$ ip a
+$ nmcli connection modify ens32 ipv4.method manual ipv4.addresses (アドレス)/24 ipv4.gateway (ゲートウェイ) ipv4.dns (DNS)
+$ sudo vi /etc/sysconfig/network-scripts/ifcfg-ens32
+ONBOOT=yesに変更
+$ nmcli con down ens32
+$ nmcli con up ens32
+
+-----
+sudoを使えるように
+$ su -
+# visudo
+root    ALL=(ALL)   ALL
+の下にユーザの行追加

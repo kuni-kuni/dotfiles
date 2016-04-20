@@ -113,3 +113,12 @@ apt-get install liblapack-dev, gfortran
 -----
 pip install ファイル.tar.gz
 でダウンロードしたファイルを直接インストールできる
+
+-----
+sshトンネリング
+ダイナミック転送でSOCKSプロキシ
+ssh -fND 8888 user@10.0.0.1
+ローカルポート転送
+ssh -fNCL 13306:10.0.0.2:3306 user@10.0.0.1
+踏み台ssh
+ssh user@10.0.0.2 -o 'ProxyCommand ssh -W %h:%p user@10.0.0.1'
