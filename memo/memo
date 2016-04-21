@@ -122,3 +122,10 @@ ssh -fND 8888 user@10.0.0.1
 ssh -fNCL 13306:10.0.0.2:3306 user@10.0.0.1
 踏み台ssh
 ssh user@10.0.0.2 -o 'ProxyCommand ssh -W %h:%p user@10.0.0.1'
+
+gオプションで他PCからも使えるようになる
+
+タイムアウトで接続が切れないようにするには
+~/.ssh/configに追記
+ServerAliveInterval 300
+ServerAliveCountMax 3
