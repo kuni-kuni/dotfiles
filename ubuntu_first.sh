@@ -8,5 +8,4 @@
 sudo apt-get install -y vim
 sudo apt-get install -y haskell-platform
 sudo apt-get install -y xmonad libghc-xmonad-contrib-dev xmobar
-sudo apt-get install -y ibus-mozc
 sudo apt-get install -y rxvt-unicode-256color
