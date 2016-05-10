@@ -19,6 +19,11 @@ set ignorecase
 set smartcase
 set incsearch
 
+"エンコード、改行コード自動判別
+set encoding=utf-8
+set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
+set fileformats=unix,dos,mac
+
 "キーマップ
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
  "オムニ補完
