@@ -129,3 +129,7 @@ gオプションで他PCからも使えるようになる
 ~/.ssh/configに追記
 ServerAliveInterval 300
 ServerAliveCountMax 3
+
+-----
+UbuntuでNvidiaドライバをapt-getした後にlow-graphics-modeになってしまう時
+sudo nvidia-xconfig

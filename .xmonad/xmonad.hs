@@ -12,7 +12,8 @@ import XMonad.Prompt
 import XMonad.Prompt.Shell
 import XMonad.Util.EZConfig
 
-myTerminal = "urxvt"
+--myTerminal = "urxvt"
+myTerminal = "gnome-terminal"
 
 myModMask = mod1Mask
 
