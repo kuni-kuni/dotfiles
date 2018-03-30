@@ -85,6 +85,8 @@ if dein#load_state('~/.vim/bundles')
   call dein#save_state()
 endif
 
+let g:vim_markdown_folding_disabled = 1
+
 " Required:
 filetype plugin indent on
 syntax enable

@@ -133,3 +133,9 @@ ServerAliveCountMax 3
 -----
 UbuntuでNvidiaドライバをapt-getした後にlow-graphics-modeになってしまう時
 sudo nvidia-xconfig
+
+-----
+Ubuntuのシステム設定画面を開く
+unity-control-center
+Ubuntuのディスクマウント画面を開く
+gnome-disks
